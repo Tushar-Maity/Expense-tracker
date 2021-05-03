@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './ExpenseForm.css';
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('');
     const [enteredAmount, setEnteredAmount] = useState('');
     const [enterdDate, setEnteredDate] = useState('');
@@ -19,7 +19,7 @@ const ExpenseForm = () => {
         //     enteredTitle: event.target.value,
         // })
 
-        /************alternative when new state depends upon the previous state and the bets one to opt***** */
+        /************alternative when new state depends upon the previous state and the best one to opt***** */
         // setUserInput((prevState) => {
         //     return {...prevState, enteredTitle: event.target.value};
         // });
@@ -50,7 +50,7 @@ const ExpenseForm = () => {
             date: new Date(enterdDate)
         };
 
-        console.log(expenseData);
+        props.onSaveExpenseData(expenseData);
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
