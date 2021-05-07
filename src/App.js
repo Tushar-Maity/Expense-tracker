@@ -37,7 +37,9 @@ function App() {
   const addExpenseHandler = expense => {
       setKharcha(prevKharcha => {
         return [expense, ...prevKharcha];
-      })
+      });
+      console.log(expense);
+      console.log(kharcha);
   };
   return (
     <div>
@@ -48,3 +50,7 @@ function App() {
 }
 
 export default App;
+
+// prevKharcha => {
+//   return [expense, ...prevKharcha];
+// }
