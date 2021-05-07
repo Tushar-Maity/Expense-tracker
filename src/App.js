@@ -35,13 +35,14 @@ function App() {
   const [kharcha, setKharcha] = useState(DUMMY_EXPENSE);
 
   const addExpenseHandler = expense => {
-      console.log("In App.js");
-      console.log(expense);
+      setKharcha(prevKharcha => {
+        return [expense, ...prevKharcha];
+      })
   };
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler}/>
-      <Expenses expenses={expenses}/>
+      <Expenses expenses={kharcha}/>
     </div>
   );
 }
