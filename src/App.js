@@ -32,20 +32,25 @@ const DUMMY_EXPENSE = [
 
 function App() {
 
-    const [kharcha, setKharcha] = useState(DUMMY_EXPENSE);
+  const [kharcha, setKharcha] = useState(DUMMY_EXPENSE);
 
-    const addExpenseHandler = expense => {
-        setKharcha([expense, ...kharcha])
-    };
-
-    // console.log(kharcha);
-
-    return (
-        <div>
-            <NewExpense onAddExpense={addExpenseHandler}/>
-            <Expenses expenses={kharcha}/>
-        </div>
-    );
+  const addExpenseHandler = expense => {
+      setKharcha(prevKharcha => {
+        return [expense, ...prevKharcha];
+      });
+      console.log(expense);
+      console.log(kharcha);
+  };
+  return (
+    <div>
+      <NewExpense onAddExpense={addExpenseHandler}/>
+      <Expenses expenses={kharcha}/>
+    </div>
+  );
 }
 
 export default App;
+
+// prevKharcha => {
+//   return [expense, ...prevKharcha];
+// }
