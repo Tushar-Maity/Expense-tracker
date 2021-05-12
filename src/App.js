@@ -38,8 +38,8 @@ function App() {
       setKharcha(prevKharcha => {
         return [expense, ...prevKharcha];
       });
-      console.log(expense);
-      console.log(kharcha);
+      // console.log(expense);
+      // console.log(kharcha);
   };
   return (
     <div>
