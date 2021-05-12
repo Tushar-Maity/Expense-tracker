@@ -45,6 +45,7 @@ function App() {
     <div>
       <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses expenses={kharcha}/>
+      <span>This is really awesome</span>
     </div>
   );
 }
