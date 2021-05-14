@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Check out my Project live on your Device
 
-Go to [The Times Of India - Clone](https://expenses-tracker01.netlify.app/)
+Go to [Expense-Tracker](https://expenses-tracker01.netlify.app/)
 
 ## Available Scripts
 
