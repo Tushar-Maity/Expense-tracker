@@ -1,4 +1,5 @@
 # IMPORTANT
+I really do love that my code and projects are helping many Developers, but it would encourage me more if you fork it and star my project, it just gives motivation to developers like us.❤❤
 
 # Getting Started with Create React App
 
